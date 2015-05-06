@@ -4,5 +4,8 @@
     <string name="app_name">PhotoAlbum</string>
     <string name="action_settings">Settings</string>
     <string name="user_hint">Username</string>
+    <string name="title_activity_admin_view">Photo Album (Admin)</string>
+    <string name="title_activity_userview">Photo Album (UserView)</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

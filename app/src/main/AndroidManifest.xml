@@ -16,6 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".util.AdminView"
+            android:label="@string/title_activity_admin_view"
+            android:parentActivityName=".util.Login" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kevinlin.photoalbum.util.Login" />
+        </activity>
+        <activity
+            android:name=".util.Userview"
+            android:label="@string/title_activity_userview"
+            android:parentActivityName=".util.Login" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kevinlin.photoalbum.util.Login" />
+        </activity>
     </application>
 
 </manifest>

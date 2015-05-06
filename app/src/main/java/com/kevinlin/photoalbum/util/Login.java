@@ -3,6 +3,7 @@ package com.kevinlin.photoalbum.util;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -35,31 +36,21 @@ public class Login extends ActionBarActivity {
             public void onClick(View v) {
                 final EditText userField = (EditText) findViewById(R.id.User);
                 String user = userField.getText().toString();
-                AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setMessage("This is very stupid")
-                        .setTitle("Error")
-                        .setPositiveButton("Close", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.dismiss();
-                            }
-                        })
-                ;
-                builder.create();
-                builder.show();
-                /*
-                if(control.login(user) && !user.equalsIgnoreCase("admin")){
-                    new ErrorMsg("The user " + user + " does not exist!");
+                if(!control.login(user) && !user.equalsIgnoreCase("admin")){
+                    new ErrorMsg(context, "The user " + user + " does not exist!");
                 }else{
                     if(user.equalsIgnoreCase("admin"))
                     {
-                        //TODO admin activity
+                        Intent intent = new Intent(context, AdminView.class);
+                        startActivity(intent);
                     }
                     else
                     {
-                        //TODO user activity
+                        Intent intent = new Intent(context, Userview.class);
+                        startActivity(intent);
                     }
                 }
-                */
+
             }
         });
     }
