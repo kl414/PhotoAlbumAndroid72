@@ -1,4 +1,4 @@
-package cs213.photoAlbum.model;
+package com.kevinlin.photoalbum.model;
 
 import java.io.File;
 import java.io.FileInputStream;

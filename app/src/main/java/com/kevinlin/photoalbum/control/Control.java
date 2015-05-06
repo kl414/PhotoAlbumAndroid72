@@ -1,4 +1,4 @@
-package cs213.photoAlbum.control;
+package com.kevinlin.photoalbum.control;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,10 +15,10 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 
-import cs213.photoAlbum.model.Album;
-import cs213.photoAlbum.model.Photo;
-import cs213.photoAlbum.model.User;
-import cs213.photoAlbum.model.iBackend;
+import com.kevinlin.photoalbum.model.Album;
+import com.kevinlin.photoalbum.model.Photo;
+import com.kevinlin.photoalbum.model.User;
+import com.kevinlin.photoalbum.model.iBackend;
 
 /**
  * @author Edward Mamedov
@@ -27,7 +27,7 @@ import cs213.photoAlbum.model.iBackend;
  */
 public class Control implements Controller{
 
-	public iBackend backend = new cs213.photoAlbum.model.iBackend();
+	public iBackend backend = new com.kevinlin.photoalbum.model.iBackend();
 	boolean result;
 	private User thisUser;
 	private DateFormat df = new SimpleDateFormat("MM/dd/yyyy-HH:mm:ss");
@@ -47,7 +47,7 @@ public class Control implements Controller{
 
 	public boolean addUser(String userId, String userName){
 		result = false;
-		User user = new cs213.photoAlbum.model.User(userId, userName);
+		User user = new com.kevinlin.photoalbum.model.User(userId, userName);
 		result = backend.addUser(user);
 		return result;
 	}
@@ -112,7 +112,7 @@ public class Control implements Controller{
 	
 	public boolean createAlbum(String albumName){
 		result = false;
-		Album album = new cs213.photoAlbum.model.Album(albumName);
+		Album album = new com.kevinlin.photoalbum.model.Album(albumName);
 		result = thisUser.add(album);
 		return result;
 	}

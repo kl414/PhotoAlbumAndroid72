@@ -1,4 +1,4 @@
-package cs213.photoAlbum.simpleview;
+package com.kevinlin.photoalbum.simpleview;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -18,10 +18,10 @@ import javax.swing.SwingConstants;
  * @author Hongjie Lin
  *
  */
-public class Error extends JDialog{
+public class ErrorText extends JDialog{
 	
-	public Error(String msg){
-		super(new JFrame(), "Error");
+	public ErrorText(String msg){
+		super(new JFrame(), "ErrorText");
 		this.setSize(300,100);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);

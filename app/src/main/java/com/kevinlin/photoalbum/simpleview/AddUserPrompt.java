@@ -104,13 +104,13 @@ public class AddUserPrompt extends JFrame {
 		{
 			if (e.getSource() == frame.addBtn){
 				if (tfUserName.getText().trim().equals("") || tfFullName.getText().trim().equals("")){
-					error.setText("Error: Need proper username and fullname");
+					error.setText("ErrorText: Need proper username and fullname");
 				}
 				else{
 					boolean temp;
 					temp = control.addUser(tfUserName.getText(), tfFullName.getText());
 					if (temp == false){
-						error.setText("Error: User exists with that username");
+						error.setText("ErrorText: User exists with that username");
 					}
 					else{
 						parent.setEnabled(true);

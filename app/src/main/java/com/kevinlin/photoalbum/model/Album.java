@@ -1,10 +1,10 @@
-package cs213.photoAlbum.model;
+package com.kevinlin.photoalbum.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cs213.photoAlbum.simpleview.*;
-import cs213.photoAlbum.simpleview.Error;
+import com.kevinlin.photoalbum.simpleview.*;
+import com.kevinlin.photoalbum.simpleview.ErrorText;
 /**
  * Album Class
  * @author Hongjie Lin

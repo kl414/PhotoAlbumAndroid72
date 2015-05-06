@@ -157,7 +157,7 @@ public class AdminView extends JFrame {
 			else if (e.getSource() == frame.deleteUser){
 				frame.error.setText("");
 				if (control.backend.getUsers().size() < 1){
-					frame.error.setText("Error: No available users to delete");
+					frame.error.setText("ErrorText: No available users to delete");
 				}
 				int index = users.getSelectedIndex();
 				if(index == -1){

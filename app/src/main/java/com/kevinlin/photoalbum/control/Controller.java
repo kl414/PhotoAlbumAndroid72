@@ -1,11 +1,11 @@
-package cs213.photoAlbum.control;
+package com.kevinlin.photoalbum.control;
 
 import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
-import cs213.photoAlbum.model.Photo;
+import com.kevinlin.photoalbum.model.Photo;
 /**
  * @author Edward Mamedov
  *

@@ -112,7 +112,7 @@ public class CmdView {
 		}
 		catch(Exception e)
 		{
-			System.out.println("Error: Didn't save backend object.");
+			System.out.println("ErrorText: Didn't save backend object.");
 		}
 		
 		
@@ -132,18 +132,18 @@ public class CmdView {
 				input = br.readLine();
 			}
 			catch(Exception e){
-				System.out.println("Error: No input, try again");
+				System.out.println("ErrorText: No input, try again");
 			}
 			String tokens[] = tokenize(input);
 
 			if (tokens.length<=0){
-				System.out.println("Error: Please input valid arguments");
+				System.out.println("ErrorText: Please input valid arguments");
 				continue;
 			}
 
 			if (tokens[0].equals("createAlbum")){
 				if (tokens.length!=2){
-					System.out.println("Error: Invalid number of arguments, use 'createAlbum \"<name>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'createAlbum \"<name>\"'");
 				}
 				else{
 					if(control.createAlbum(tokens[1])){
@@ -159,7 +159,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("deleteAlbum")){
 				if (tokens.length!=2){
-					System.out.println("Error: Invalid number of arguments, use 'deleteAlbum \"<name>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'deleteAlbum \"<name>\"'");
 				}
 				else{
 					if(control.deleteAlbum(tokens[1])){
@@ -175,7 +175,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("listAlbums")){
 				if (tokens.length!=1){
-					System.out.println("Error: Invalid number of arguments, use 'listAlbums");
+					System.out.println("ErrorText: Invalid number of arguments, use 'listAlbums");
 				}
 				else{
 					control.listAlbums();
@@ -184,7 +184,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("listPhotos")){
 				if (tokens.length!=2){
-					System.out.println("Error: Invalid number of arguments, use 'listPhotos \"<name>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'listPhotos \"<name>\"'");
 				}
 				else{
 					control.listPhotos(tokens[1]);
@@ -193,7 +193,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("addPhoto")){
 				if (tokens.length!=4){
-					System.out.println("Error: Invalid number of arguments, use 'addPhoto \"<fileName>\" \"<caption>\" \"<albumName>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'addPhoto \"<fileName>\" \"<caption>\" \"<albumName>\"'");
 				}
 				else{
 					if(control.addPhoto(tokens[1], tokens[2], tokens[3])){
@@ -210,7 +210,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("movePhoto")){
 				if (tokens.length!=4){
-					System.out.println("Error: Invalid number of arguments, use 'movePhoto \"<fileName>\" \"<oldAlbumName>\" \"<newAlbumName>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'movePhoto \"<fileName>\" \"<oldAlbumName>\" \"<newAlbumName>\"'");
 				}
 				else{
 					if (control.movePhoto(tokens[1],tokens[2],tokens[3])){
@@ -222,7 +222,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("removePhoto")){
 				if (tokens.length!=3){
-					System.out.println("Error: Invalid number of arguments, use 'removePhoto \"<fileName\" \"<albumName>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'removePhoto \"<fileName\" \"<albumName>\"'");
 				}
 				else{
 					if (control.removePhoto(tokens[1], tokens[2])){
@@ -234,7 +234,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("addTag")){
 				if(tokens.length != 4){
-					System.out.println("Error: Invalid number of arguments, use 'addTag \"<fileName>\" <tagType>:\"<tagValue>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'addTag \"<fileName>\" <tagType>:\"<tagValue>\"'");
 				}else{
 					if(control.addTag(tokens[1], tokens[2].replaceAll(":",""), tokens[3])){
 						System.out.println("Added tag:");
@@ -245,7 +245,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("deleteTag")){
 				if(tokens.length != 4){
-					System.out.println("Error: Invalid number of arguments, use 'deleteTag \"<fileName>\" <tagType>:\"<tagValue>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'deleteTag \"<fileName>\" <tagType>:\"<tagValue>\"'");
 				}else{
 					if(control.deleteTag(tokens[1], tokens[2].replaceAll(":",""), tokens[3])){
 						System.out.println("Deleted tag:");
@@ -256,7 +256,7 @@ public class CmdView {
 
 			else if (tokens[0].equals("listPhotoInfo")){
 				if(tokens.length != 2){
-					System.out.println("Error: Invalid number of arguments, use 'listPhotoInfo \"<fileName>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'listPhotoInfo \"<fileName>\"'");
 				}else{
 					control.listPhotoInfo(tokens[1]);
 				}
@@ -265,7 +265,7 @@ public class CmdView {
 			else if (tokens[0].equals("getPhotosByDate")){
 				if(tokens.length != 3 )
 				{
-					System.out.println("Error: Invalid number of arguments, use 'getPhotosByDate \"<startDate>\" \"<endDate>\"'");
+					System.out.println("ErrorText: Invalid number of arguments, use 'getPhotosByDate \"<startDate>\" \"<endDate>\"'");
 				}
 				else{
 					List<String> photos = new ArrayList<String>();
@@ -300,7 +300,7 @@ public class CmdView {
 
 			else
 			{
-				System.out.println("Error: No such command");
+				System.out.println("ErrorText: No such command");
 				continue;
 			}
 		}
