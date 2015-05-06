@@ -3,8 +3,6 @@ package com.kevinlin.photoalbum.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.kevinlin.photoalbum.simpleview.*;
-import com.kevinlin.photoalbum.simpleview.ErrorText;
 /**
  * Album Class
  * @author Hongjie Lin
